@@ -1,8 +1,8 @@
-import React,{Component} from 'react';
+import React,{Component,PropTypes} from 'react';
 class Comment extends Component{
-    // static propTypes = {
-    //     comment:PropTypes.object.isRequired
-    // }
+    static propTypes = {
+        comment:PropTypes.object.isRequired
+    }
     constructor(){
         super();
         this.state = {timeString:''}
