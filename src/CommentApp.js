@@ -27,7 +27,6 @@ class CommentApp extends Component{
         comments.splice(index,1);
         this.setState({comments});
         this.props.saveData(comments);
-        
     }
     render(){
         return(
