@@ -1,7 +1,6 @@
-import React,{Componen,PropTypes} from 'react';
+import React,{Component,PropTypes} from 'react';
 import CommentInput from './CommentInput';
 import CommentList from './CommentList';
-import wrapWithLoadData from './wrapWithLoadData';
 
 class CommentApp extends Component{
     static propTypes = {
@@ -16,6 +15,7 @@ class CommentApp extends Component{
     
     handleSubmitComment(comment){
         const comments = this.state.comments;
+        
         comments.push(comment);
         this.setState({
             comments
@@ -27,6 +27,7 @@ class CommentApp extends Component{
         comments.splice(index,1);
         this.setState({comments});
         this.props.saveData(comments);
+        
     }
     render(){
         return(
